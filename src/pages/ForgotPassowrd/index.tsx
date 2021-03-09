@@ -1,10 +1,18 @@
-import React from 'react';
+import { useNavigation } from '@react-navigation/core';
+import React, { useCallback } from 'react';
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
 
 import {Container, Bottom, TextBottom, ButtonSignup, TextButtonSignup, ButtonNext, TextButtonNext} from './styles'
 
 export default function ForgotPassword() {
+
+  const { navigate } = useNavigation();
+
+  const handleGoSignin = useCallback(() => {
+    navigate('Signin');
+  }, []);
+
   return(
     <>
       <Container>
@@ -19,7 +27,7 @@ export default function ForgotPassword() {
       </Container>
       <Bottom>
         <TextBottom>Remember the password?</TextBottom>
-        <ButtonSignup>
+        <ButtonSignup onPress={handleGoSignin}>
           <TextButtonSignup> Try again</TextButtonSignup>
         </ButtonSignup>
       </Bottom>

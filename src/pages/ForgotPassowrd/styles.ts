@@ -1,3 +1,4 @@
+import { RectButton } from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
@@ -26,6 +27,22 @@ export const ButtonSignup = styled.TouchableOpacity`
 
 export const TextButtonSignup = styled.Text`
   color: #333647;
+  font-family: 'OpenSans_600SemiBold';
+  font-size: 16px;
+`;
+
+export const ButtonNext = styled(RectButton)`
+  background-color: #475AD7;
+  height: 56px;
+  border-radius: 12px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+`;
+
+export const TextButtonNext = styled.Text`
+  color: #fff;
   font-family: 'OpenSans_600SemiBold';
   font-size: 16px;
 `;

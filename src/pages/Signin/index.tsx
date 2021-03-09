@@ -12,6 +12,10 @@ export default function Signin() {
     navigate('ForgotPassword');
   }, []);
 
+  const handleGoHome = useCallback(() => {
+    navigate('Tabs');
+  }, []);
+
   return (
     <>
       <Container>
@@ -21,7 +25,7 @@ export default function Signin() {
         <ButtonForgot onPress={handleGoForgotPassword}>
           <TextForgot>Forgot Password?</TextForgot>
         </ButtonForgot>
-        <ButonSignin>
+        <ButonSignin onPress={handleGoHome}>
           <TextButtonSignin>Sign In</TextButtonSignin>
         </ButonSignin>
       </Container>

@@ -4,7 +4,7 @@ import { Container, Description, Title } from './styles';
 
 interface IProps {
   title: string;
-  description: string;
+  description?: string;
 }
 
 export function Header({description, title}: IProps) {

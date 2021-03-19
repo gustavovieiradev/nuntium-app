@@ -40,7 +40,7 @@ export default function Profile() {
           <ItemName>Language</ItemName>
           <Feather name="chevron-right" color="#666C8E" size={20} />
         </ItemMenu>
-        <ItemMenu>
+        <ItemMenu onPress={() => handleNavigate('ChangePassword')}>
           <ItemName>Change Password</ItemName>
           <Feather name="chevron-right" color="#666C8E" size={20} />
         </ItemMenu>

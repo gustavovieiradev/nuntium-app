@@ -6,6 +6,7 @@ import Signin  from '../pages/Signin';
 import ForgotPassword from '../pages/ForgotPassowrd';
 import RoutesTab from './tabs.routes';
 import Language from '../pages/Language';
+import ChangePassword from '../pages/ChangePassword';
 
 const {Navigator, Screen} = createStackNavigator();
 
@@ -16,6 +17,7 @@ export default function Routes() {
         <Screen name="Signin" component={Signin} />
         <Screen name="ForgotPassword" component={ForgotPassword} />
         <Screen name="Language" component={Language} />
+        <Screen name="ChangePassword" component={ChangePassword} />
         <Screen name="Tabs" component={RoutesTab} />
       </Navigator>
     </NavigationContainer>

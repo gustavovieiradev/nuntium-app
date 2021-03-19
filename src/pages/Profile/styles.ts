@@ -38,7 +38,7 @@ export const Menu = styled.View`
   margin-top: 32px;
 `;
 
-export const ItemMenu = styled.View`
+export const ItemMenu = styled.TouchableOpacity`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;

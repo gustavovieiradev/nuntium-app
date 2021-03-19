@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Feather } from '@expo/vector-icons';
 
 import { Header } from '../../components/Header';
@@ -6,8 +6,16 @@ import { Container, Email, ImgUser, Info, InfoData, Name, Menu, ItemMenu, ItemNa
 
 import userImg from '../../images/user.png';
 import { Switch } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
 
 export default function Profile() {
+
+  const { navigate } = useNavigation();
+
+  const handleNavigate = useCallback((page: string) => {
+    navigate(page);
+  }, []);
+
   return (
     <Container>
       <Header title="Profile" />
@@ -28,7 +36,7 @@ export default function Profile() {
             trackColor={{ false: '#ccc', true: '#475AD7' }}
           />
         </ItemMenu>
-        <ItemMenu>
+        <ItemMenu onPress={() => handleNavigate('Language')}>
           <ItemName>Language</ItemName>
           <Feather name="chevron-right" color="#666C8E" size={20} />
         </ItemMenu>

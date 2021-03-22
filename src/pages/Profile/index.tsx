@@ -48,11 +48,11 @@ export default function Profile() {
           <ItemName>Privacy</ItemName>
           <Feather name="chevron-right" color="#666C8E" size={20} />
         </ItemMenu>
-        <ItemMenu>
+        <ItemMenu onPress={() => handleNavigate('Term')}>
           <ItemName>Terms {"&"} Conditions</ItemName>
           <Feather name="chevron-right" color="#666C8E" size={20} />
         </ItemMenu>
-        <ItemMenu>
+        <ItemMenu onPress={() => handleNavigate('Signin')}>
           <ItemName>Sign Out</ItemName>
           <Feather name="log-out" color="#666C8E" size={20} />
         </ItemMenu>
